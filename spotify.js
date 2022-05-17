@@ -4,8 +4,8 @@ const SpotifyWebApi = require("spotify-web-api-node");
 
 // Create the api object with the credentials
 const spotifyApi = new SpotifyWebApi({
-  clientId: clientId,
-  clientSecret: clientSecret,
+  clientId: '4ff906ba735d4b0d87a81cd82c98f431',
+  clientSecret: '53b500431122496c8dd1b07d3c93a662',
 });
 
 
@@ -21,13 +21,8 @@ spotifyApi.clientCredentialsGrant().then(
         // Search tracks whose artist's name contains 'Kendrick Lamar', and track name contains 'Alright'
         spotifyApi.searchTracks('artist:Jack Harlow track:First Class ')
         .then(function(data) {
-        let pos = {
-            trackName: '',
-            artistName:'',
-            popularity:''
-        }
-        console.log(pos)
-        console.log('Search tracks by "Alright" in the track name and "Kendrick Lamar" in the artist name', JSON.stringify(data.body));
+      
+        console.log(JSON.stringify(data.body.tracks.items[0].name));
         }, function(err) {
         console.log('Something went wrong with retreiving the song!', err);
         });
