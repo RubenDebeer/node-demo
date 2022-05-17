@@ -13,3 +13,20 @@ Secondly we need to install the Spotify Web APi dependancy to make use of a libr
 ```bash
 npm i spotify 
 ```
+
+Thirdly we Need to install the Twitter Web Api dependancy that we will use to Authenticate and Make APIC calls with
+
+```bash
+npm i twitter
+```
+
+Take note that the first install will install all of the needed dependancies thus installing spotify and twitter packages are not needed.
+
+## Usage
+TRun the application by runing the following command:
+```bash
+node app.js
+```
+
+## License
+Your Name Date and Version number 
